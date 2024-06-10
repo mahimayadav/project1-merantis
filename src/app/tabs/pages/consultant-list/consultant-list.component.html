@@ -1,0 +1,112 @@
+<div class="container reqContainer">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row mt-4">
+                    <div class="col-sm-12">
+                        <div class="reqHeader">
+                            <h3>Consultant List</h3>
+                        </div>
+                    </div>
+                </div>
+              
+            <div class="row card mt-10">
+                <div class="col-sm-12 mt-4">
+                    <div class="medicineHeader ">
+                        <div class="d-flex">
+                        <button class="btn orderbtn">Thank you for being part of Merantis Below are assigned reports to review</button>
+                        <button class="btn orderbtn">Amount Available to Redeem $ Request Cheque - Cheque will be sent to your registered address</button>
+                        <button class="btn orderbtn">Your Current Rate of review per document $</button>
+                
+                </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <form >
+                        <div class="mt-4 table-responsive-lg overflow-auto">
+                            <table class="docTabStyle bg-white my-table table-hover tableContent table-bordered">
+                                <thead style="height: 56px;">
+                                    <tr>
+                                        <th>
+                                           
+                                                <p>S.No</p>
+                                        </th>
+                                        <th>Report Name</th>
+                                        <th>
+                                            Client ID
+                                        </th>
+                                        <th>
+                                            Report Reviewed Data
+                                        </th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                       <tr *ngFor="let data of paymentTable;let i = index">
+                                           <td>
+                                              <p >
+                                                        {{data?.id}}<br>
+                                                        <span style="color: #2449D9; text-decoration: underline;cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal">View Details</span>
+                                                    
+                                                    </p>
+                                            </td>
+                                            <td>
+                                               <div class="docProfileStyle">
+                                                   <div class="profileName">
+                                                        <p>{{data?.report_name}}</p>
+                                                   </div>
+                                               </div>
+                                            </td>
+                                            <td>
+                                                <div class="docProfileStyle">
+                                                    <div class="profileName">
+                                                         <p>{{data?.expert_review}}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="docProfileStyle">
+                                                    <div class="profileName">
+                                                         <p>{{data?.request_expert_review}}</p>
+                                                    </div>
+                                                </div>
+                                             </td>
+                                           
+                                            <td>
+                                                <img src="../../../../assets/images/ic_edit.svg" class="mx-2"> 
+                                    <img src="../../../../assets/images/ic_delete_red.svg">
+                               
+                                            </td>
+                                       </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0px;">
+                            <!-- <pagination-controls id="payable_id" (pageChange)="p = $event"></pagination-controls> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+         
+            <div class="modal-body">
+              <app-view-consultant-details></app-view-consultant-details>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+ 
+

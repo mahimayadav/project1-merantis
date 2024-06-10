@@ -1,0 +1,81 @@
+<section>
+    <div class="container">
+        <!-- <div class="col-lg-6 signInRow"> -->
+
+            <div class="d-flex align-items-center">
+                <div class="loginStyle mt-2" id="loginid">
+                    <h1 class="formTitle">Add Consultant</h1>
+
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <form [formGroup]="loginFormViaId" class="linkDivStyle">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Consultant Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control signInputStyle" id="empId"
+                                    placeholder="Enter Consultant Name" name="employee_id" formControlName="employee_id">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Consultant Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control signInputStyle" id="empId"
+                                    placeholder="Enter Email" name="employee_id" formControlName="employee_id">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Consultant Company</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control signInputStyle" id="empId"
+                                    placeholder="Enter Company Name" name="employee_id" formControlName="employee_id">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Company Type</label>
+                            <!-- <div class="input-group"> -->
+                                    <select id="country" name="country"  placeholder="Choose Type">
+                                        <option value="india">India</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                      </select>
+                            <!-- </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Consultant Phone No</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control signInputStyle" id="empId"
+                                    placeholder="Enter Company Phone No" name="employee_id" formControlName="employee_id">
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex user-selection">
+                            <div class="col-md-4">
+                            <p class="forgetPassword">Please send more information (check all that apply):</p></div>
+                            <div class="col-md-8 text-left">
+                                <p class="forgetPassword"><input type="checkbox">HRT Broker Partnership</p>
+                                <p class="forgetPassword"><input type="checkbox">Web Enrollment</p>
+                                <p class="forgetPassword"><input type="checkbox">HR Complience Library</p>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex user-selection">
+                            <div class="col-md-4">
+                            <p class="forgetPassword">Please enter additional Comment here:</p></div>
+                            <div class="col-md-8 text-left">
+                                <p class="forgetPassword"><textarea type="text" rows="3"></textarea></p>
+                            </div>
+                        </div>
+                        <div class="row mx-3">
+                            <div class="flex d-flex justify-center">
+                                <button type="button" class="btn btn-default " (click)="loginViaEmpId()">Cancel
+                                </button>
+                                <button type="button" class="btn btn1" (click)="loginViaEmpId()">Save
+                                </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+    </div>
+</section>

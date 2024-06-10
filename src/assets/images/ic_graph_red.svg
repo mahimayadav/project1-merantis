@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="70" viewBox="0 0 210 70">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3277" data-name="Rectangle 3277" width="210" height="70" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f04438" stop-opacity="0.051"/>
+      <stop offset="0.676" stop-color="#fff" stop-opacity="0.161"/>
+      <stop offset="1" stop-color="gray" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="ic_graph_red" clip-path="url(#clip-path)">
+    <path id="Path_60717" data-name="Path 60717" d="M-8623.562-7639.89s-12.854,12.511-27.093,12.313-31.008-16.776-51.974-15.21-38.219,38.5-60.543,35.128-35.957-18.78-49.485-19.918-21.286,5.07-21.286,5.07v65.416h193.478l16.9-11.072Z" transform="translate(8833.943 7648.589)" fill="url(#linear-gradient)"/>
+    <path id="Path_60718" data-name="Path 60718" d="M360,386.571s1.639-3.535,16.688-5.2,36.76,20.585,57.613,20.377,36.76-32.645,56.108-35.556,39.555,17.258,55.033,15.179a43.423,43.423,0,0,0,24.292-11.436" transform="translate(-360 -360.285)" fill="none" stroke="rgba(240,68,56,0.08)" stroke-width="1"/>
+  </g>
+</svg>

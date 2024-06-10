@@ -1,0 +1,86 @@
+<section>
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <div class="loginStyle mt-2" id="loginid">
+                <h4 class="formTitle"><b>Upload Documents</b></h4>
+
+                <div class="col-md-12 col-sm-12 col-12 my-4">
+                    <div class="row d-flex">
+                        <div class="container" style="max-width: 100%;">
+                            <div class="row" >
+                                <div class="col-12 addBookingStyle">
+                                    <div class="upload-inner">
+                                        <ng-container>
+                                            <ng-container>
+                                                <input id="file-upload" class="file" type="file" (change)="OnFileChange($event)" name="bulk_upload" accept="application/pdf" />
+                                                <div class="icon">
+                                                    <i class="fa fa-cloud-upload"></i>
+                                                </div>
+                                            </ng-container>
+                                            <!-- <div *ngIf="documentImage" class="document-label">
+                                                <h6 class="mb-0 text-left">{{ documentImage?.key }}</h6>
+                                                <a class="remove ml-3" >
+                                                    <img src="./../../../../../assets/images/ic_remove.svg">
+                                                </a>
+                                            </div> -->
+                                            <div class="bottom">
+                                                <p>
+                                                    Drag and drop your files
+                                                    <br> Or <a class="color-green fw-bolder" >Click here</a> to upload.
+                                                </p>
+                                                <p><small>Note: Supporting Files . PDF . JPG . PNG . DOC</small></p>
+                                                <p class="text-medium mt-3">
+                                                    <small>
+                                                        Note: Documents should have a resolution of at least 150 dpi, and they should not be blank.
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                
+                                <div class="btns w-100 mt-3 text-center">
+                                    <button class="btn btn-primary p-2" (click)="processDocument()"
+                                    [disabled]="!documentImage">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-4">
+                            <div class="card">
+                                <div class="form-group my-2">
+                                    <input type='file' class="form-control" (change)="OnFileChange($event)" formControlName="uploadFile" multiple>
+                                    <img src="./../../../../../assets/images/ic_remove.svg" class="imageCss" (click)="remove(i)">      
+                                </div>
+                            </div>
+                            </div>
+                        </div> -->
+                        <div class="col-md-3" *ngFor="let op of myFiles">
+                            <div class="card">
+                                <div class="d-flex justify-content-center align-items-center">
+                                     <p class="fileCss">{{op?.name}}</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-3">
+                            <div class="card">
+                                <div class="d-flex justify-content-center align-items-center my-5 mx-5"> <img
+                                        src="../../../../../assets/images/icons8-file-48.png" width="15px"
+                                        height="15px"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="d-flex justify-content-center align-items-center my-5 mx-5"> <img
+                                        src="../../../../../assets/images/icons8-file-48.png" width="15px"
+                                        height="15px"></div>
+                            </div>
+                        </div> -->
+                    </div>
+               </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

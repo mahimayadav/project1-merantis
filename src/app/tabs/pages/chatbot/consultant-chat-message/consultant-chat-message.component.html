@@ -1,0 +1,150 @@
+<div id="frame">
+    <!-- <div id="sidepanel">
+        <div id="top-bar">
+            <p>MERANTIS</p>
+        </div>
+
+        <div id="contacts">
+            <ul class="chat-list mb-0">
+                <li class="clearfix">
+                    <div class="about">
+                        <div class="d-flex justify-content-between" (click)="getDashboard()">
+                            <p>Dashboard</p>
+                            <span><img src="../../../../../assets/images/ic_dropdown_one.svg" alt="avatar" width="15px"
+                                    height="25px"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="about">
+                        <div class="d-flex justify-content-between" (click)="getAllUserReports()">
+                            <p>Reports</p>
+                            <span><img src="../../../../../assets/images/ic_dropdown_one.svg" alt="avatar" width="15px"
+                                    height="25px"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="about">
+                        <div class="d-flex justify-content-between">
+                            <p>Shortcuts</p>
+                            <span><img src="../../../../../assets/images/ic_dropdown_one.svg" alt="avatar" width="15px"
+                                    height="25px"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="about">
+                        <div class="d-flex justify-content-between">
+                            <p>Social Settings</p>
+                            <span><img src="../../../../../assets/images/ic_dropdown_one.svg" alt="avatar" width="15px"
+                                    height="25px"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="bottom-bar">
+            <button id="addcontact">
+                <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
+                <span>Add Contact</span>
+            </button>
+            <button id="settings">
+                <i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span>
+            </button>
+        </div>
+    </div> -->
+
+    <div class="content">
+		<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				
+				  <li class="nav-item">
+					<p class="form-check form-switch mt-2 mr-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+							checked>
+					</p>
+				  </li>
+				  <li class="nav-item">
+					<img [src]="activeUser.img" alt="" class="imgCss"  width="15px" height="15px"/>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						{{activeUser.name}}
+					</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" [routerLink]="'/'">LogOut</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav> -->
+		  
+		<!-- <div class="contact-profile">
+
+			<div class="social-media d-flex">
+				<button class="btn btn-default mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+					Credit</button>
+				<p class="mt-3 mx-2">$ 500 </p>
+				<p class="form-check form-switch  mt-3">
+					<input class="form-check-input mr-1" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+						checked>
+				</p>
+				<img [src]="activeUser.img" alt="" />
+				<ul class="navbar-nav mt-1">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active text-capitalize" href="#" id="navbarDropdown1"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							{{activeUser.name}}
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" (click)="onLogout()">Log
+									Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+		</div> -->
+		<ng-container *ngIf="!isViewReports">
+			<div class="messages" #scrollMe>
+				<ul class="chat-list mb-0">
+					<li [class]="msg.type" *ngFor="let msg of activeUser?.messages">
+						<img [src]="msg.type === 'sent' ? activeUser.img : messageReceivedFrom.img" alt="" />
+						<p>{{msg?.message || ''}}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="message-input">
+				<div class="wrap">
+					<input type="text" #msgInput placeholder="Write your message..."
+						(keyup.enter)="addNewMessage(msgInput)" />
+					<i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+					<button class="submit" (click)="addNewMessage(msgInput)">
+						<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+		</ng-container>
+		<ng-container *ngIf="isViewReports">
+			<app-consultant-report></app-consultant-report>
+		</ng-container>
+		<!-- <ng-container *ngIf="isViewUploadDoc">
+			<app-upload-documents></app-upload-documents>
+		</ng-container> -->
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body mx-3">
+                <app-add-credit></app-add-credit>
+            </div>
+        </div>
+    </div>
+</div>

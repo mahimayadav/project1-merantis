@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="ic_calendar" transform="translate(-0.34)">
+    <rect id="Rectangle_2723" data-name="Rectangle 2723" width="18" height="18" transform="translate(0.34)" fill="none"/>
+    <path id="Path_60453" data-name="Path 60453" d="M.573,0H12.036a.573.573,0,0,1,.573.573V12.036a.573.573,0,0,1-.573.573H.573A.573.573,0,0,1,0,12.036V.573A.573.573,0,0,1,.573,0Z" transform="translate(2.866 2.866)" fill="none" stroke="#115983" stroke-linecap="round" stroke-width="1.2"/>
+    <path id="Path_60452" data-name="Path 60452" d="M0,0V2.293" transform="translate(12.609 1.719)" fill="none" stroke="#115983" stroke-linecap="round" stroke-width="1.2"/>
+    <path id="Path_60451" data-name="Path 60451" d="M0,0V2.293" transform="translate(5.731 1.719)" fill="none" stroke="#115983" stroke-linecap="round" stroke-width="1.2"/>
+    <path id="Path_60450" data-name="Path 60450" d="M0,0H12.609" transform="translate(2.866 6.304)" fill="none" stroke="#115983" stroke-linecap="round" stroke-width="1.2"/>
+  </g>
+</svg>

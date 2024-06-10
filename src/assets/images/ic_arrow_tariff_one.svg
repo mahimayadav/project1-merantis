@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="ic_arrow_right" transform="translate(-1241 -290)">
+    <circle id="Ellipse_109" data-name="Ellipse 109" cx="15" cy="15" r="15" transform="translate(1241 290)" fill="#edf3ff"/>
+    <g id="caret-down_1_" data-name="caret-down (1)" transform="translate(1249.25 311.75) rotate(-90)">
+      <rect id="Rectangle_2223" data-name="Rectangle 2223" width="14" height="14" transform="translate(-0.25 -0.25)" fill="none"/>
+      <path id="Path_50230" data-name="Path 50230" d="M8.689,0,4.344,4.681,0,0" transform="translate(2.736 5.274)" fill="none" stroke="#0054a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

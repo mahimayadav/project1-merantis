@@ -1,0 +1,55 @@
+
+<div class="main" [ngClass]='{"sidebar-closed":isCollapsed}' *ngIf='isLogged'>
+    <div class="sidebar-outer">
+        <span class="close-icon" (click)='isCollapsed = !isCollapsed'>
+            <i class="fa fa-chevron-left  m-0"></i>
+        </span>
+        <div class="closed-overlay"></div>
+        
+        <app-sidebar *ngIf='!isCollapsed'></app-sidebar>
+    </div>
+    <div class="content flex h-full flex-col">
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<button class="btn btn-default mt-1 mr-3" data-bs-toggle="modal"
+								data-bs-target="#exampleModal">Add
+								Credit</button>
+						</li>
+						<li class="nav-item">
+							<p class="mt-2 mx-2">$ 500 </p>
+						</li>
+						<li class="nav-item">
+							<p class="form-check form-switch mt-2 mr-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+									checked>
+							</p>
+						</li>
+						<li class="nav-item">
+							<img [src]="activeUser.img" alt="" class="imgCss" width="15px" height="15px" />
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								{{activeUser.name}}
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" [routerLink]="'/auth/user-login'">LogOut</a></li>
+								<!-- <li><a class="dropdown-item" [routerLink]="'/auth/admin-login'">LogOut</a></li>
+								<li><a class="dropdown-item" [routerLink]="'/auth/consultant-login'">LogOut</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <router-outlet (activate)="onActivate()"></router-outlet>
+		
+    </div>
+</div>
+

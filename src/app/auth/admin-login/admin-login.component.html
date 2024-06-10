@@ -1,0 +1,94 @@
+<section class="login">
+    <div class="container">
+        <div class="col-lg-6 signInRow">
+<form [formGroup]="loginFormViaId">
+            <div class="d-flex align-items-center text-center justify-content-center">
+                <div class="loginStyle mt-2" id="loginid">
+                    <h1 class="formTitle">LOGIN</h1>
+                    <P class="forgetPassword">Please login to access with your ID:</P>
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <div class="form-group">
+                            <label for="email" class="form-label">UserName*</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control signInputStyle icon" id="empId"
+                                    placeholder="Enter Email" name="user_name" formControlName="user_name" [ngClass]="{ 'is-invalid': submitted && f['user_name'].errors }">
+                            </div>
+                            <div *ngIf="submitted && f['user_name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['user_name'].errors['required']">User Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password*</label>
+                            <div class="input-group">
+                                <input [type]="showPassword ? 'text' : 'password'" class="form-control signInputStyle"
+                                    id="password" placeholder="Enter password" name="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                                    formControlName="password">
+                                <div>
+                                    <i alt="show" class="fa fa-eye-slash eye-show dropdown-icon"
+                                        (click)="showPassword = !showPassword" [class.hide]="showPassword"></i>
+                                    <i alt="hide" class="fa fa-eye eye-hide dropdown-icon"
+                                        (click)="showPassword = !showPassword" [class.hide]="!showPassword"></i>
+                                </div>
+                            </div>
+                            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-6 col-12">
+                                <p class="forgot-pass"><input type="radio" checked>By Login user Agrees to Merantis <span class='underline'><a href="#"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Terms and Conditions </a></span></p>
+                            </div>
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-6 col-12">
+                                <p class="forgot-pass"><input type="checkbox"> By Login user Agrees to Merantis <span class='underline'><a href="#"
+                                        style="color: blue;" data-bs-toggle="modal" data-bs-target="#exampleModal">Terms and Conditions </a></span></p>
+                            </div> -->
+                            <div class="col-lg-2"></div>
+                            <div class="row text-center login">
+                                <button type="button" class="btn btn1" (click)="onLogin()">LOGIN
+                                </button>
+                            </div>
+                            <div class="row mx-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="small text-grey">Remember Me</p>
+                                    <p class="small text-grey" (click)="onForgotPassword()">Forgot Password?</p>
+                                </div>
+                            </div>
+                            <div class="row text-center login">
+                                <button type="button" class="btn btn2" (click)="loginViaEmpId()">Single Sign On (SSO)
+                                </button>
+                            </div>
+                            <div class="row text-center">
+                                <div class="d-flex flex-col align-items-center justify-content-center">
+                                    <img src="../../../assets/icons8-facebook.svg" height="37px" width="37px" (click)=" signInWithFB()">
+                                    <!-- <img src="../../../assets/icons8-google.svg" height="37px" width="37px"> -->
+                                    <asl-google-signin-button type='icon' size='medium'></asl-google-signin-button>
+                                    <img src="../../../assets/icons8-apple.svg" height="37px" width="37px">
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <p class="forgot-pass" style="text-align: center;"> Don't have an account? <span class='underline'><a  (click)="onAdminSugnup()"
+                            style="text-align: center; color: blue;"> Sign Up</a></span>
+                    </p>
+                </div>
+
+            </div>
+        </form>
+        </div>
+
+
+    </div>
+</section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body mx-3">
+          <app-terms-condition></app-terms-condition>
+        </div>
+      </div>
+    </div>
+  </div> 

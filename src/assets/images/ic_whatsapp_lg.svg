@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232" height="232" viewBox="0 0 232 232">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.081" y1="0.024" x2="1" y2="0.982" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00b25b"/>
+      <stop offset="1" stop-color="#07f180"/>
+    </linearGradient>
+    <filter id="Rectangle_147732" x="0" y="0" width="232" height="232" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#b6caec" flood-opacity="0.651"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ic_whatsapp_lg" transform="translate(-578 -364)">
+    <g transform="matrix(1, 0, 0, 1, 578, 364)" filter="url(#Rectangle_147732)">
+      <rect id="Rectangle_147732-2" data-name="Rectangle 147732" width="214" height="214" rx="12" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_79966" data-name="Group 79966" transform="translate(618.001 401)">
+      <path id="Path_64280" data-name="Path 64280" d="M81.486,91.2a37.593,37.593,0,0,1-7.71-3.671A44.074,44.074,0,0,1,61.414,76.055a48.986,48.986,0,0,1-2.85-4.336,23.635,23.635,0,0,1-2.731-6.288,13.28,13.28,0,0,1-.351-2.85A11.35,11.35,0,0,1,59.4,53.617a5.139,5.139,0,0,1,5.576-.83c1.892,1.067,2.877,3.757,3.748,5.645.689,1.477,1.468,3.42,1.181,5.079s-1.6,3.055-2.635,4.286a1.787,1.787,0,0,0-.228,2.439A29.155,29.155,0,0,0,81.586,82.69a1.6,1.6,0,0,0,2.07-.451c1.085-1.331,2.152-3.953,3.821-4.633,2.18-.889,4.587.342,6.434,1.45,1.724,1.03,4.6,2.294,5.066,4.418a5.272,5.272,0,0,1-.378,3.091c-1.359,3.292-4.724,5.4-8.134,6.051a10.373,10.373,0,0,1-1.983.187,22.254,22.254,0,0,1-6.995-1.6M40.773,72.809A36.31,36.31,0,0,0,46.1,91.695l.944,1.55L43.4,106.828l13.661-3.661,1.541.921A36.4,36.4,0,1,0,40.773,72.809m-2.854,21.7a45.022,45.022,0,1,1,17.929,17.774L31.4,118.834ZM75.636,0a75.636,75.636,0,1,0,75.636,75.636A75.637,75.637,0,0,0,75.636,0Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+* {
+    font-family: 'Inter';
+    user-select: none;
+    padding: 0;
+    margin: 7px;
+    box-sizing: border-box;
+    // align-items: center;
+    text-align: -webkit-center;
+  }
+  
+  body {
+    height: auto;
+  }
+  .fileCss{
+    // padding: 7px;
+    word-break: break-all;
+  }
+  
+  .loginStyle {
+    width: 65%;
+    margin-left: 15%;
+  
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 80% !important;
+    }
+  
+    @media screen and (min-width: 1025px) and (max-width: 1366px) {
+      width: 70%;
+    }
+  
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0%;
+    }
+  }
+
+
+  .upload-inner {
+    border: 3px dashed #3ec27a7d;
+    min-height: 300px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin-top: 15px;
+    .file-img {
+        text-align: center;
+    }
+    .file {
+        width: 100%;
+        height: 280px;
+        z-index: 99;
+        position: absolute;
+        opacity: 0;
+    }
+    .img-responsive {
+        max-width: 100%;
+        display: inline-block;
+    }
+    .icon {
+        // width: 150px;
+        // height: 150px;
+        border-radius: 50%;
+        // background-color: #fff;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+        // box-shadow: 0 1px 6px #0000001f;
+        margin-bottom: 50px;
+        i {
+            font-size: 70px;
+            color: #35B670;
+        }
+    }     
+    .tab-pane {
+        display: none;
+        text-align: center;
+    }   
+    .active {
+        display: block;
+    }
+    .bottom {
+        bottom: 10px;
+        position: absolute;
+        font-size: 0.85em;
+        p {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #344054;
+            text-align: center;
+            small {
+                font-size: 0.85em;
+            }
+        }
+        a.color-green {
+            color: #3EC27A;
+        }
+    }        
+    .invalid{
+        border-color: #F04438;
+        padding: 10px;
+        border-radius: 15px;
+        text-align: center;
+        display: inline-flex;
+    }
+    .remove {
+        border-radius: 5px;
+        width: 39px;
+        height: 39px;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        background-color: #F044380D;
+        cursor: pointer;
+        z-index: 99;
+        position: relative;
+    }
+}

@@ -1,0 +1,265 @@
+<div class="container reqContainer">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row mt-4">
+                    <div class="col-sm-12">
+                        <div class="reqHeader">
+                            <h3>Admin List</h3>
+                            <div class="btngrp">
+                                <!-- <button class="btn imprtbtn">
+                                    <img src="/assets/images/upload.svg" width="15px">
+                                    Import
+                                </button> -->
+                                <button class="btn orderbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <img src="/assets/images/add-filled.svg" width="15px">
+                                    Add Consultant
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-10">
+                    <div class="col-sm-12 cardselect">
+                        <div  class="car-details reqCard  m-1" *ngFor="let card of diagbosticLabData" (click)="filterClaimList(card);">
+                            <div class="p-grid p-nogutter">
+                                <div class="p-col-12 car-data card" 
+                                [ngStyle]="{'background-color': card.color, 
+                                'background-image': 'url(' + card.path + ')'}"
+                                    style="background-repeat: no-repeat; background-position: 0px 47px; background-size: 100%; width: 100%; padding: 0rem 0.2rem 1rem;"
+                                        [ngClass]="{ 'selected-card cardsColor': selected === card.name ,'carousel-card': selected === card.name}">
+                                    <div class="row car-title pl-3 pt-3"
+                                            [ngClass]="{ 'notSelectedCardName': selected != card.name }">
+                                        <span class="col-12" style="font-size: .9rem; font-weight: 600;">{{card.name}}</span>
+                                    </div>
+                                    <div [ngClass]="selected == card.name  ? 'selectedCardScore' : 'nonSelectedCardScore'"
+                                            class="pl-3 mt-4" style="padding: 5px 0px;">{{card.score == 'NaN%' ? '0%' : card.score}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row card mt-10">
+                <div class="col-sm-12 mt-4">
+                    <div class="medicineHeader">
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by ID">
+                        </div>
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by Client name or Report">
+                        </div>
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by Consultant name or Report">
+                        </div>
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by Updated By">
+                        </div>
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by Status">
+                        </div>
+                        <div class="row float-right">
+                            <button class="btn exprttbtn">
+                                <img src="/assets/images/upload.svg" width="15px">
+                                Export Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="options d-flex mt-3" *ngIf="isSelected && orderData.length > 0">
+                    <button class="btn deleteclientbtn" (click)="deleteClientById()">Delete selected</button>
+                    <button class="btn deleteclientbtn" (click)="updateClientById()">Update selected</button>
+                </div>
+                <div class="col-sm-12">
+                    <form >
+                        <div class="mt-4 table-responsive-lg overflow-auto">
+                            <table class="docTabStyle bg-white my-table table-hover tableContent table-bordered">
+                                <thead style="height: 56px;">
+                                    <tr>
+                                        <th>
+                                            <div style="display: flex">
+                                                <div style="width: 50%;">
+                                                    <!-- <input type="checkbox" class="form-control"> -->
+                                                </div>
+                                                <p>S.No</p>
+                                            </div>
+                                        </th>
+                                        <th>Client Name</th>
+                                        <th>
+                                           Client Report
+                                        </th>
+                                        <th>
+                                            Consultant Name
+                                        </th>
+                                        <th>Consultant Report</th>
+                                        <th>Verified</th>
+                                        <th>Updated Date</th>
+                                        <th>Updated By</th>
+                                        <th>Report Status</th>
+
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                       <tr *ngFor="let data of orderData ;let i = index">
+                                           <td>
+                                                <div class="bookIdStyle">
+                                                    <div style="width: 50%;">
+                                                        <input type="checkbox" name="" id=""
+                                                        #checkboxes [checked]="selectedData==data"
+                                                                (change)="oncheck($event, data)">
+                                                    </div>
+                                                    <p >
+                                                        {{data?.id}}<br>
+                                                        <!-- <span style="color: #2449D9; text-decoration: underline;cursor: pointer;" (click)="viewReportDetails()">View Details</span> -->
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                               <div class="docProfileStyle">
+                                                   <div class="docProfileImg">
+                                                       <img src="{{ '../../../../../../assets/images/Avatar_' }}{{ i + 1 }}{{ '@2x.png' }}" width="54px">
+                                                   </div>
+                                                   <div class="profileName">
+                                                        <p>{{data?.emp_name}}</p>
+                                                        <p style="color: #667085;">ID: {{data?.emp_id}}</p>
+                                                   </div>
+                                               </div>
+                                            </td>
+                                            <td>
+                                                 3 <br>
+                                                 <span style="color: #2449D9; text-decoration: underline;cursor: pointer;" (click)="viewReportDetails()">View Report</span>
+                                                
+                                            </td>
+                                            <td>
+                                                <div class="docProfileStyle">
+                                                    <div class="docProfileImg">
+                                                        <img src="{{ '../../../../../../assets/images/Avatar_' }}{{ i + 1 }}{{ '@2x.png' }}" width="54px">
+                                                    </div>
+                                                    <div class="profileName">
+                                                         <p>{{data?.emp_name}}</p>
+                                                         <p style="color: #667085;">ID: {{data?.emp_id}}</p>
+                                                    </div>
+                                                </div>
+                                             </td>
+                                             <td>
+                                                  4<br>
+                                                  <span style="color: #2449D9; text-decoration: underline;cursor: pointer;" (click)="viewReportDetails()">View Report</span>
+                                                 
+                                             </td>
+                                            <td>
+                                            
+                                                <p
+                                                    [ngClass]="{'verified': client_status}">
+                                                    {{client_status ? 'Verified' :
+                                                    ''}}
+                                                </p>
+                                                <button type="button" class="btn referBtnStyle1"
+                                                *ngIf="!client_status"
+                                                data-bs-toggle="modal" data-bs-target="#authorization">Verify</button>
+                                            </td>
+                                            <td>
+                                                <p>{{data?.order_date}}</p>
+                                                <p>{{data?.time}}</p>
+                                            </td>
+                                            <td>
+                                                john
+                                            </td>
+                                        
+                                           <td>
+                                                <p [ngClass]="{'homeStyle': data.status == 'Delivered', 'pendingStyle': data.status == 'Pending', 'cancelStyle': data.status == 'Cancelled'}">
+                                                    {{data?.status}}
+                                                </p>
+                                              
+                                            </td>
+                                       </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0px;">
+                            <!-- <pagination-controls id="payable_id" (pageChange)="p = $event"></pagination-controls> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authorization">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body mx-3">
+          <app-add-consultant></app-add-consultant>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- verification -->
+
+  <div class="modal fade" id="authorization" tabindex="-1" aria-labelledby="authorization" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body mx-3">
+            <div class="authStyle mt-2" id="loginid">
+                <h1 class="formTitle">Authorization</h1>
+
+                <div class="col-md-12 col-sm-12 col-12">
+                    <div class="col-12 d-flex user-selection">
+                        <div class="col-md-4">
+                        <p class="forgetPassword">Remarks:</p></div>
+                        <div class="col-md-8 text-left">
+                            <p class="forgetPassword"><textarea type="text" rows="3"></textarea></p>
+                        </div>
+                    </div>
+                    <div class="row mx-3">
+                        <div class="flex d-flex justify-center">
+                            <button type="button" class="btn btn2 " (click)="rejected()">Rejected
+                            </button>
+                            <button type="button" class="btn btn1" (click)="approved()">Approved
+                            </button>
+                        </div>
+                        <!-- <div class="row text-center">
+                            <div class="flex flex-col">
+                                <img src="../../../assets/icons8-facebook.svg" height="37px" width="37px">
+                                <img src="../../../assets/icons8-google.svg" height="37px" width="37px">
+                                <img src="../../../assets/icons8-apple.svg" height="37px" width="37px">
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-lg-2"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-12">
+                            <p class="forgot-pass">By Login user Agrees to Merantis <a href="#"
+                                    (click)="forgetPassword()">Terms and Conditions </a></p>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- verified Consultant -->
+
+

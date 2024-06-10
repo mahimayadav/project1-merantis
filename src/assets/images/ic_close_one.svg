@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="ic_close_2" transform="translate(-280.867 -272.8)">
+    <circle id="Ellipse_58" data-name="Ellipse 58" cx="16.5" cy="16.5" r="16.5" transform="translate(280.867 272.8)" fill="#115983" opacity="0.2"/>
+    <path id="MobileCancelMajor" d="M299.325,290.489l4.086-4.086a.649.649,0,0,0-.9-.934l-.016.016-4.086,4.086-4.087-4.086a.649.649,0,1,0-.951.884l.017.018.016.016,4.086,4.086-4.086,4.086a.649.649,0,0,0,.884.951l.018-.017.016-.016,4.088-4.087,4.086,4.086a.649.649,0,1,0,.951-.883l-.017-.019-.016-.016Z" transform="translate(-1.115 -1.116)" fill="#115983" stroke="#115983" stroke-width="0.5"/>
+  </g>
+</svg>

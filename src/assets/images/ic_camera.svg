@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="ic_camera" transform="translate(0.186 0.186)">
+    <rect id="Rectangle_3448" data-name="Rectangle 3448" width="22" height="22" transform="translate(-0.186 -0.186)" fill="none"/>
+    <path id="Path_60964" data-name="Path 60964" d="M46.181,53.536H33.289A1.289,1.289,0,0,1,32,52.247V43.223a1.289,1.289,0,0,1,1.289-1.289h2.578L37.156,40h5.157L43.6,41.934h2.579a1.289,1.289,0,0,1,1.289,1.289v9.024A1.289,1.289,0,0,1,46.181,53.536Z" transform="translate(-28.686 -35.686)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    <path id="Path_60965" data-name="Path 60965" d="M2.84,0A2.84,2.84,0,1,1,0,2.84,2.84,2.84,0,0,1,2.84,0Z" transform="translate(8.314 8.314)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.8"/>
+  </g>
+</svg>

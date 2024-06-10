@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
+  <defs>
+    <filter id="Ellipse_5" x="0" y="0" width="33" height="33" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ic_arrow_left" transform="translate(-596.5 -2410.5)">
+    <g transform="matrix(1, 0, 0, 1, 596.5, 2410.5)" filter="url(#Ellipse_5)">
+      <circle id="Ellipse_5-2" data-name="Ellipse 5" cx="12" cy="12" r="12" transform="translate(28.5 27.5) rotate(180)" fill="#fff"/>
+    </g>
+    <g id="caret-right_4_" data-name="caret-right (4)" transform="translate(620.001 2433.001) rotate(180)">
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="14" height="14" transform="translate(0.001 0.001)" fill="none"/>
+      <path id="Path_64" data-name="Path 64" d="M96,48l4.576,4.576L96,57.152" transform="translate(-90.509 -45.254)" fill="none" stroke="#35b670" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

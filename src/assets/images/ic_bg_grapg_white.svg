@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="247.291" height="105.909" viewBox="0 0 247.291 105.909">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.676" stop-color="#fff" stop-opacity="0.161"/>
+      <stop offset="1" stop-color="gray" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="ic_bg_grapg_white" transform="translate(-400.999 -400.091)" opacity="0.13">
+    <path id="Path_60623" data-name="Path 60623" d="M-8587.331-7639.2s-15.066,15.372-31.759,15.128-36.348-20.611-60.924-18.687-44.8,47.295-70.97,43.157-42.15-23.072-58.008-24.47-24.952,6.229-24.952,6.229v80.369h226.8l19.815-13.6Z" transform="translate(9235.264 8043.479)" fill="url(#linear-gradient)"/>
+    <path id="Path_60624" data-name="Path 60624" d="M-8833.943-7617.848s9.095-7.626,24.952-6.229,31.839,20.333,58.008,24.47,46.393-41.233,70.97-43.157,44.23,18.443,60.924,18.687,31.759-15.128,31.759-15.128" transform="translate(9235.264 8043.479)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

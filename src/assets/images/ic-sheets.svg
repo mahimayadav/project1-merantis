@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="23" viewBox="0 0 23 23">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0aa25a"/>
+      <stop offset="1" stop-color="#05954f"/>
+    </linearGradient>
+  </defs>
+  <g id="ic-sheets" transform="translate(0 -0.063)">
+    <rect id="Rectangle_3428" data-name="Rectangle 3428" width="23" height="23" rx="4" transform="translate(0 0.063)" fill="#f2f3f4"/>
+    <g id="Group_24007" data-name="Group 24007" transform="translate(3.452 1.883)">
+      <path id="Path_60933" data-name="Path 60933" d="M0,1.258A1.255,1.255,0,0,1,1.255,0h9.73l4.708,4.708v12.87a1.255,1.255,0,0,1-1.258,1.253H1.258A1.258,1.258,0,0,1,0,17.573Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+      <path id="Path_60934" data-name="Path 60934" d="M8,19H18.671v8.16H8Zm.628.628v1.883h2.511V19.628Zm3.138,0v1.883h6.275V19.628ZM8.628,22.138v1.883h2.511V22.138Zm3.138,0v1.883h6.275V22.138ZM8.628,24.649v1.883h2.511V24.649Zm3.138,0v1.883h6.275V24.649Z" transform="translate(-5.489 -13.037)" fill="#e6f5ee"/>
+      <path id="Path_60935" data-name="Path 60935" d="M35,0l4.708,4.708H35Z" transform="translate(-24.015)" fill="#7bcfa9"/>
+      <path id="Path_60936" data-name="Path 60936" d="M35,15l4.708,4.708V15Z" transform="translate(-24.015 -10.292)" fill="#0d611a" opacity="0.417"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,152 @@
+<div class="container reqContainer">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <div class="reqHeader">
+                        <h3><img src="/assets/images/ic_back_link.svg" class="linkBackImgStyle" (click)="backTo()">
+                            Consultant Reports List</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row card mt-10">
+                <div class="col-sm-12 mt-4">
+                    <div class="medicineHeader">
+                        <div class="d-flex">
+                            <!-- <button class="btn orderbtn">Report and Document</button> -->
+                            <button class="btn orderbtn">Buy Credit To get Industry Expert Review
+                                Package 1 - 5 Reviews</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                        <div class="mt-4 table-responsive-lg overflow-auto">
+                            <table class="docTabStyle bg-white my-table table-hover tableContent table-bordered">
+                                <thead style="height: 56px;">
+                                    <tr>
+                                        <th>
+                                            S.No
+                                        </th>
+                                        <th>
+                                            Id
+                                        </th>
+                                        <th>Report Name</th>
+                                        <th>
+                                            Previous Industry Expert Review er
+                                        </th>
+                                        <th>
+                                            Request Industry Expert Review
+                                        </th>
+                                        <th>Reviewers Reports</th>
+                                        <th>
+                                            Review Request by Expert 
+                                        </th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of getAllReports;let i = index">
+                                        <td>
+                                            {{data?.sNo}}
+                                        </td>
+                                        <td>
+                                            {{data?._id}}<br>
+
+                                        </td>
+                                        <td>
+                                            <div class="docProfileStyle">
+                                                <div class="profileName">
+                                                    <p>{{data?.reportName}}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="docProfileStyle">
+                                                <div class="profileName">
+                                                    <p>{{data?.previousReview}}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="docProfileStyle">
+                                                <div class="profileName">
+                                                    <p>{{data?.requestReview}}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a download="report.png" class="btn viewDownloadBtn"
+                                            href="data:image/png;base64,{{downloadReport}}">
+                                                <img src="../../../../../../assets/images/download.png" width="15px">
+                                        </a>
+                                           
+                                        </td>
+                                        <td><button class="btn btn2" (click)="reviewRequest(data._id)">Request Review</button></td>
+                                        <td>
+                                            <img src="../../../../assets/images/ic_edit.svg" class="mx-2" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate" (click)="updateReportById(data)">
+                                            <!-- <img src="../../../../../assets/images/delete.png" width="20px"
+                                                (click)="deleteReportById(data._id)" class="mx-2"> -->
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0px;">
+                            <!-- <pagination-controls id="payable_id" (pageChange)="p = $event"></pagination-controls> -->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body mx-3">
+                <section>
+                    <div class="container">
+                        <div class="d-flex align-items-center">
+                            <div class="loginStyle mt-2" id="loginid">
+                                <h4 class="formTitle"><b>Update Report</b></h4>
+                                <form [formGroup]="loginFormViaId" class="linkDivStyle">
+                                    <div class="form-group">
+                                        <label class="form-label">Report Name</label>
+                                        <input type="text" class="form-control icon" id="reportName"
+                                            placeholder="Enter Report Name" name="reportName"
+                                            formControlName="reportName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Previous Review</label>
+                                        <input type="text" class="form-control icon1" id="previous_review"
+                                            placeholder="Enter Previous Review" name="previous_review"
+                                            formControlName="previous_review">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Request Review</label>
+                                        <input type="text" class="form-control icon1" id="request_review"
+                                            placeholder="Enter Request Review" name="request_review"
+                                            formControlName="request_review">
+                                    </div>
+                                    <div class="row ">
+                                        <div class="d-flex justify-content: center; button">
+                                            <button type="button" class="btn btn1" (click)="updateReport()">Update
+                                                Report
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

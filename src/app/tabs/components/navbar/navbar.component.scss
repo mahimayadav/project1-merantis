@@ -1,0 +1,142 @@
+body, html {
+  height: 100%;
+}
+
+.popover-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+.nav-ber-css {
+    a{
+        --tw-text-opacity: 1;
+        color: rgb(0 44 111 / var(--tw-text-opacity));
+    font-size: 15px;
+    font-weight: 700;
+    }
+}
+
+@mixin caret-down {
+    border-top: $caret-width solid;
+    border-right: $caret-width solid transparent;
+    border-bottom: 0;
+    border-left: $caret-width solid transparent;
+  }
+  
+  @mixin caret-up {
+    border-top: 0;
+    border-right: $caret-width solid transparent;
+    border-bottom: $caret-width solid;
+    border-left: $caret-width solid transparent;
+  }
+  
+  @mixin caret-end {
+    border-top: $caret-width solid transparent;
+    border-right: 0;
+    border-bottom: $caret-width solid transparent;
+    border-left: $caret-width solid;
+  }
+  
+  @mixin caret-start {
+    border-top: $caret-width solid transparent;
+    border-right: $caret-width solid;
+    border-bottom: $caret-width solid transparent;
+  }
+  
+  @mixin caret($direction: down) {
+    @if $enable-caret {
+      &::after {
+        display: inline-block;
+        margin-left: $caret-spacing;
+        vertical-align: $caret-vertical-align;
+        content: "";
+        @if $direction == down {
+          @include caret-down();
+        } @else if $direction == up {
+          @include caret-up();
+        } @else if $direction == end {
+          @include caret-end();
+        }
+      }
+  
+      @if $direction == start {
+        &::after {
+          display: none;
+        }
+  
+        &::before {
+          display: inline-block;
+          margin-right: $caret-spacing;
+          vertical-align: $caret-vertical-align;
+          content: "";
+          @include caret-start();
+        }
+      }
+  
+      &:empty::after {
+        margin-left: 0;
+      }
+    }
+  }
+
+  li .dropdown select{
+    margin: 8px;
+    padding: 2px;
+    border: 0;
+    // border-bottom: none;
+    background-color: transparent;
+    width: 25px;
+    // --tw-text-opacity: 1;
+    // color: rgb(0 44 111 / var(--tw-text-opacity));
+    font-size: 1rem !important;
+    font-weight: 700px;
+  }
+
+
+
+  .form-select {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    // background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    /* border: 1px solid #ced4da; */
+    border-radius: 0.25rem;
+    // transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    appearance: none;
+}
+
+.dropdown-style {
+  margin: 8px;
+}
+
+
+select option {
+  background: transparent;
+  border: 0;
+}
+
+
+::ng-deep   popover-container {
+	position: absolute;
+  }
+
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }

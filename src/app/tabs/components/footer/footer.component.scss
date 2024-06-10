@@ -1,0 +1,37 @@
+.relative {
+    input[type="search"] {
+        border-radius: 9999px;
+        font-size: 16px;
+        padding-inline-start: 2.5rem;
+    }
+
+    .p-4 {
+        padding: 1rem !important;
+    }
+
+    img {
+        // margin-left: -35px;
+        height: 25px;
+        width: 25px;
+    }
+
+}
+
+.footer {
+
+    .bg-color-about-us {
+        background-color: rgb(237, 235, 235);
+        height: 100vh;
+    }
+
+    .footer-css {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+.link-styling {
+    font-size: 0.7rem;
+    line-height: 16px;
+    color: #616161;
+    word-break: break-word;
+}

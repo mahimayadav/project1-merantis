@@ -1,0 +1,87 @@
+* {
+    font-family: 'Inter';
+    user-select: none;
+    padding: 0;
+    // margin: 5px;
+    box-sizing: border-box;
+    // align-items: center;
+    text-align: -webkit-center;
+}
+
+body {
+    height: auto;
+}
+
+.formTitle {
+    font-size: 1.8rem;
+    color: #07AEF9;
+    font-weight: 600;
+    padding-left: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.pendingImg {
+    width: 10rem;
+    height: 10rem;
+}
+
+.pendingClaim {
+    letter-spacing: 0px;
+    color: #8D8D8D;
+    opacity: 0.9;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    text-align: left;
+}
+
+.pendingClaim-details {
+    letter-spacing: 0px;
+    color: black;
+    opacity: 1;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.referBtnStyle1,
+.referBtnStyle1:hover,
+.referBtnStyle1:focus {
+    border: 1px solid #07AEF9;
+    color: #07AEF9;
+    background-color: #fff;
+    font-size: .85rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    border-radius: 5rem;
+    // @media screen and (max-width: 767px) {
+    //     width: auto;
+    // }
+}
+
+.Experties{
+    label{
+        color: #07AEF9;
+        text-align: left;
+    }
+
+    input[type="text"],textarea{
+        border-radius: 5px;
+        text-align: left;
+        font-size: 0.85rem;
+        padding: 10px;
+        
+    }
+
+}

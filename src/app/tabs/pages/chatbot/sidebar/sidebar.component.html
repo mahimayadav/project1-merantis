@@ -1,0 +1,50 @@
+<div class="sidebar sidebarscroll">
+    <div class="d-flex box">
+        <h4>MERANTIS</h4>
+    </div>
+    <div class="sidebar-inner d-none my-2" *ngIf='menuItems'>
+        <div class="sidebar-list full-navigation">
+            <a routerLinkActive="active" routerLink="{{menuItem.path}}" class="sidebar-item"
+                *ngFor='let menuItem of menuItems'>
+                <!-- <i class="mr-3" [ngClass]="menuItem.icon"></i> -->
+                <img class="mr-3" [src]="menuItem.icon" style="width: 18px;">
+                <h4 class="mb-0">
+                    {{menuItem.title}}
+                </h4>
+            </a>
+        </div>
+    </div>
+    <ul class="side-nav-menu side-nav-menu-top-level mb-0">
+        <li class="side-nav-menu-item"
+            [ngClass]='{"side-nav-has-menu":menuItem.submenu.length > 0,"side-nav-opened":(openedMenu == menuItem.title && isOpen)}'
+            (click)='openedMenu = menuItem.title' *ngFor='let menuItem of menuItems'>
+            <a class="side-nav-menu-link media align-items-center"
+                *ngIf='menuItem.title!="Integrated Connectors"; else IntegratedConnectors' (click)="openCloseMenu()"
+                routerLinkActive="active" routerLink="{{menuItem.path}}">
+                <span class="side-nav-menu-icon d-flex mr-3">
+                    <!-- <img [src]="menuItem.icon" style="width:18px;"> -->
+                    <i [class]="menuItem.icon"></i>
+                </span>
+                <span class="side-nav-fadeout-on-closed media-body">{{menuItem.title}}</span>
+                <span class="side-nav-control-icon side-nav-menu-icon" *ngIf='menuItem.submenu.length > 0'>
+                    <i class="fa fa-chevron-right"></i>
+                   
+                </span>
+                <span class="side-nav__indicator side-nav-fadeout-on-closed" *ngIf='menuItem.submenu.length > 0'></span>
+            </a>
+            <ng-template #IntegratedConnectors>
+                <a class="side-nav-menu-link media align-items-center cursor-pointer" (click)="alert()">
+                    <span class="side-nav-menu-icon d-flex mr-3">
+                        <img [src]="menuItem.icon" style="width: 18px;">
+                    </span>
+                    <span class="side-nav-fadeout-on-closed media-body">{{menuItem.title}}</span>
+                    <span class="side-nav-control-icon side-nav-menu-icon" *ngIf='menuItem.submenu.length > 0'>
+                        <i class="fa fa-chevron-right"></i>
+                    </span>
+                    <span class="side-nav__indicator side-nav-fadeout-on-closed"
+                        *ngIf='menuItem.submenu.length > 0'></span>
+                </a>
+            </ng-template>
+      </li>
+    </ul>
+</div>

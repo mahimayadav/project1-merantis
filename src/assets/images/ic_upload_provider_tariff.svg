@@ -1,0 +1,9 @@
+<svg id="ic_upload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_3504" data-name="Rectangle 3504" width="24" height="24" fill="none"/>
+  <g id="Group_24485" data-name="Group 24485" transform="translate(3 4)">
+    <path id="Path_60986" data-name="Path 60986" d="M37.217,128h4.174a.7.7,0,0,1,.7.7v5.565a.7.7,0,0,1-.7.7H24.7a.7.7,0,0,1-.7-.7V128.7a.7.7,0,0,1,.7-.7H28.87" transform="translate(-24 -118.957)" fill="none" stroke="#115983" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+    <path id="Path_60989" data-name="Path 60989" d="M0,9.043V0" transform="translate(9.043)" fill="none" stroke="#115983" stroke-linecap="round" stroke-width="1.6"/>
+    <path id="Path_60987" data-name="Path 60987" d="M80,28.174,84.174,24l4.174,4.174" transform="translate(-75.13 -24)" fill="none" stroke="#115983" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
+    <path id="Path_60988" data-name="Path 60988" d="M1.043,0A1.043,1.043,0,1,1,0,1.043,1.043,1.043,0,0,1,1.043,0Z" transform="translate(13.217 11.478)" fill="#115983"/>
+  </g>
+</svg>

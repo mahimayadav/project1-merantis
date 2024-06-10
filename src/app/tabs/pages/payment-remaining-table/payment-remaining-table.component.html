@@ -1,0 +1,114 @@
+<div class="container reqContainer">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row mt-4">
+                    <div class="col-sm-12">
+                        <div class="reqHeader">
+                            <h3>Payment Remaining List</h3>
+                            <!-- <div class="btngrp">
+                                <button class="btn orderbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <img src="/assets/images/add-filled.svg" width="15px">
+                                    Add Consultant
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+              
+            <div class="row card mt-10">
+                <div class="col-sm-12 mt-4">
+                    <div class="medicineHeader">
+                        <div class="form-group diagnosticSearchStyle">
+                            <span><img src="/assets/images/ic_search_blue.svg" style="width: 20px;"></span>
+                            <input type="text" class="form-control" placeholder="Search by ID">
+                        </div>
+                        <div class="float-right">
+                            <button class="btn exprttbtn">
+                                <img src="/assets/images/upload.svg" width="15px">
+                                Export Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <form >
+                        <div class="mt-4 table-responsive-lg overflow-auto">
+                            <table class="docTabStyle bg-white my-table table-hover tableContent table-bordered">
+                                <thead style="height: 56px;">
+                                    <tr>
+                                        <th>
+                                                <p>S.No</p>
+                                        </th>
+                                        <th>Report Name</th>
+                                        <th>
+                                            Previous Industry Expert Review er
+                                        </th>
+                                        <th>
+                                            Request Industry Expert Review
+                                        </th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                       <tr *ngFor="let data of paymentTable;let i = index">
+                                           <td>
+                                             {{data?.id}}<br>
+                                                  
+                                            </td>
+                                            <td>
+                                               <div class="docProfileStyle">
+                                                   <div class="profileName">
+                                                        <p>{{data?.report_name}}</p>
+                                                   </div>
+                                               </div>
+                                            </td>
+                                            <td>
+                                                <div class="docProfileStyle">
+                                                    <div class="profileName">
+                                                         <p>{{data?.expert_review}}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="docProfileStyle">
+                                                    <div class="profileName">
+                                                         <p>{{data?.request_expert_review}}</p>
+                                                    </div>
+                                                </div>
+                                             </td>
+                                           
+                                            <td>
+                                                <img src="../../../../assets/images/ic_edit.svg" class="mx-2"> 
+                                    <img src="../../../../assets/images/delete.png" width="25px" height="25px">
+                               
+                                            </td>
+                                       </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0px;">
+                            <!-- <pagination-controls id="payable_id" (pageChange)="p = $event"></pagination-controls> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body mx-3">
+          <!-- <app-add-consultant></app-add-consultant> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+

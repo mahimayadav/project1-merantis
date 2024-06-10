@@ -1,0 +1,31 @@
+* {
+    font-family: 'Inter';
+    user-select: none;
+    padding: 0;
+    margin: 7px;
+    box-sizing: border-box;
+    // align-items: center;
+    text-align: -webkit-center;
+  }
+  
+  body {
+    height: auto;
+  }
+  
+  .loginStyle {
+    width: 65%;
+    margin-left: 15%;
+  
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 80% !important;
+    }
+  
+    @media screen and (min-width: 1025px) and (max-width: 1366px) {
+      width: 70%;
+    }
+  
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0%;
+    }
+  }
